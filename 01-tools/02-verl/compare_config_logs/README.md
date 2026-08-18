@@ -6,18 +6,20 @@
 
 在能读到两份日志的环境里执行即可，不依赖 NPU，也不用进训练容器。
 
+在仓库根目录执行：
+
 ```bash
-# 1. 进入目录
-cd /home/zhouyang/train-kit/01-tools/02-verl/compare_config_logs
+# 1. 进入工具目录
+cd 01-tools/02-verl/compare_config_logs
 
 # 2. 安装依赖（只需一次）
 pip install -r requirements.txt
 
 # 3. 传入两份 verl 日志
 python compare_config_logs.py \
-    /path/to/npu.log \
-    /path/to/gpu.log \
-    -o /path/to/config_compare.xlsx \
+    npu.log \
+    gpu.log \
+    -o config_compare.xlsx \
     --name-a npu \
     --name-b gpu
 ```
@@ -43,7 +45,7 @@ python compare_config_logs.py log_a.out log_b.log
 ```
 npu.log: parsed OK (end~L1234), top-level keys=...
 gpu.log: parsed OK (end~L5678), top-level keys=...
-Wrote /path/to/config_compare.xlsx
+Wrote config_compare.xlsx
 total=... same=... diff=... only_a=... only_b=...
 ```
 
