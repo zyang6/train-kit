@@ -8,4 +8,7 @@
   01-dockers/    训练容器启动脚本
   02-verl/
     compare_config_logs/  从两份 verl 日志提取 config，生成 Excel 对比表
+02-features/
+  01-verl/
+    sequence_packing/     verl pack（remove padding）特性说明
 ```

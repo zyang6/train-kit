@@ -1,0 +1,3 @@
+# CPU demo: no extra deps (uses bundled PyTorch).
+# GPU + real FlashAttention varlen:
+#   pip install flash-attn
